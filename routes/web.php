@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/tasks', 'TaskController@index');
+Route::get('/', 'TaskController@index');
 Route::post('/task', 'TaskController@save');
 Route::delete('/task-destroy/{task}', 'TaskController@destroy');
 Route::patch('/task-update/{task}', 'TaskController@updateTask');
